@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boilerplate-web
+  labels:
+    app: boilerplate-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: boilerplate-web
+  template:
+    metadata:
+      labels:
+        app: boilerplate-web
+    spec:
+      containers:
+      - name: web
+        image: ghcr.io/5iing/docker-sample-image:latest
+        ports:
+        - containerPort: 80
