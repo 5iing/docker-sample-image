@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: ghcr.io/5iing/docker-sample-image/my-app:<tag>
+        image: ghcr.io/5iing/docker-sample-image/my-app:latest
         ports:
         - containerPort: 80
